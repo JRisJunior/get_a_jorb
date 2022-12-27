@@ -1,0 +1,2 @@
+###SHOW Jobs
+GET http://localhost:3000/jobs.json
