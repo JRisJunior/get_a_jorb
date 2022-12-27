@@ -1,0 +1,41 @@
+<h1>Make a new job listing.</h1>
+<%= form_with model: @job do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <% @user.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+    <% @user.errors.full_messages_for(:description).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+    <% @user.errors.full_messages_for(:url).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+    <% @user.errors.full_messages_for(:location).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+    <div>
+    <%= form.label :salary_range %>
+    <%= form.text_field :salary_range %>
+    <% @user.errors.full_messages_for(:salary_range).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

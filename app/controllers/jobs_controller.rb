@@ -19,5 +19,8 @@ class JobsController < ApplicationController
       else
         render html: "Your job did not save correctly. Please try again."
       end
+    else
+      render html: "You cannot access this page without being an admin."
     end
+  end
 end
