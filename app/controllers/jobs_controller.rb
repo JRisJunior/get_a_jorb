@@ -16,15 +16,15 @@ class JobsController < ApplicationController
   def create
     if current_user && current_user.admin_level == true
       @job = Job.new(
-        title: params[:job][:name],
+        title: params[:job][:title],
         description: params[:job][:description],
         url: params[:job][:url],
         location: params[:job][:location],
-        active: params[:job][:active],
+        active: true,
         salary_range: params[:job][:salary_range]
       )
       if @job.save
-        render "jobs/index"
+        redirect_to "/jobs/"
       else
         render html: "Your job did not save correctly. Please try again."
       end
