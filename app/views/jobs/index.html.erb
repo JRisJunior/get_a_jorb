@@ -12,6 +12,7 @@
 <li>Location: <%= jobs.location%></li>
 <li> Active: <%= jobs.active%></li>
 <li>Salary: <%= jobs.salary_range%></li>
+<a href="/jobs/<%= jobs.id %>">Jobs by the company</a>
 <hr />
 <%else%>
 <p> No new jobs in region</p>
