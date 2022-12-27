@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/jobs" => "jobs#index"
 
+  get "/jobs/admins" => "jobs#new"
+  post "/jobs" => "jobs#create"
+
   get "/signup" => "users#new"
   post "/users" => "users#create"
 
