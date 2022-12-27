@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get "/jobs" => "jobs#index"
   get "/jobs/:id" => "jobs#show"
 
+  get "/jobs/admins" => "jobs#new"
+  post "/jobs" => "jobs#create"
+
   get "/signup" => "users#new"
   post "/users" => "users#create"
 
