@@ -1,0 +1,26 @@
+<h1>Make a new job listing.</h1>
+<%= form_with model: @job do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+  <div>
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+  <div>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+    <div>
+    <%= form.label :salary_range %>
+    <%= form.text_field :salary_range %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
