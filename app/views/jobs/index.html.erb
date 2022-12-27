@@ -1,3 +1,19 @@
-<h1>Jobs page</h1>
-<h2>Here Users will see all Open Jobs </h2>
-<p>Jobs table : <%= @jobs%> </p>
+<h1 align="center">Jobs page</h1>
+<h2>What's new in the market</h2>
+<!-- search doesn't work yet  -->
+<label> Job search: <input type ="search" placeholder ="search job title"><button>Search</button>
+<label> Active: </label><input type ="checkbox" id ="active">
+<hr />
+<%@jobs.each do |jobs| %>
+<% if jobs.active = true%>
+<h3>#<%= jobs.id%>. <%= jobs.title%></h3>
+<p><%= jobs.description%></p>
+<li>Job site: <a href ="<%=jobs.url%>">Link</a></li>
+<li>Location: <%= jobs.location%></li>
+<li> Active: <%= jobs.active%></li>
+<li>Salary: <%= jobs.salary_range%></li>
+<hr />
+<%else%>
+<p> No new jobs in region</p>
+<%end%>
+<% end%>
