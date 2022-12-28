@@ -4,6 +4,10 @@
 <label> Job search: <input type ="search" placeholder ="search job title"><button>Search</button>
 <label> Active: </label><input type ="checkbox" id ="active">
 <hr />
+<% if current_user.admin_level == true %>
+<%= button_to "New Job Posting", action: "new", form_class: "job" %>
+<% else %>
+<% end %>
 <%@jobs.each do |jobs| %>
 <% if jobs.active = true%>
 <h3>#<%= jobs.id%>. <%= jobs.title%></h3>
@@ -17,4 +21,4 @@
 <%else%>
 <p> No new jobs in region</p>
 <%end%>
-<% end%>
+<%end%>
