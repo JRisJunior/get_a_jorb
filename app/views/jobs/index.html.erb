@@ -1,7 +1,13 @@
 <h1 align="center">Jobs page</h1>
 <h2>What's new in the market</h2>
 <!-- search doesn't work yet  -->
-<label> Job search: <input type ="search" placeholder ="search job title"><button>Search</button>
+<%= form_tag jobs_path, method: :get do%>
+<%=label_tag "Search job title:"%>
+<%=text_field_tag :search, params[:search]%>
+<%= submit_tag "Search" %>
+<% end %>
+
+
 <label> Active: </label><input type ="checkbox" id ="active">
 <hr />
 <%@jobs.each do |jobs| %>
