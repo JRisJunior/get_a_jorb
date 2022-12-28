@@ -152,6 +152,9 @@ GEM
     rake (13.0.6)
     reline (0.3.2)
       io-console (~> 0.5)
+    seed_dump (3.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -192,6 +195,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
+  seed_dump
   sprockets-rails
   stimulus-rails
   turbo-rails
