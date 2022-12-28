@@ -3,7 +3,13 @@ class JobsController < ApplicationController
     @jobs = Job.all
     render "jobs/index"
   end
-
+  
+  def show
+    @job = Job.find_by(id: params[:id])
+    @jobs_by_company = Job.where(company_id: @job.company_id)
+    render "jobs/show"
+  end
+  
   def new
     @job = Job.new
     if current_user && current_user.admin_level == true
