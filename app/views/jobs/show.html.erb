@@ -1,6 +1,8 @@
 <h1>Jobs by company</h1>
-  <% @jobs_by_company.each do |jobs|%>
-  <p><%= jobs.title%></p>
-  <hr />
+<h3>Company - <%= @job.company.name%></h3>
+<hr />
+<% @jobs_by_company.each do |jobs|%>
+  <li>Title: <%= jobs.title%></li>
 <% end %>
+<hr />
 <a href="/jobs">Back to all jobs</a>
