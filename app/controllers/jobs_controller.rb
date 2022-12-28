@@ -11,6 +11,7 @@ class JobsController < ApplicationController
   end
   
   def new
+    @job = Job.new
     if current_user && current_user.admin_level == true
       render "jobs/new"
     else
@@ -29,11 +30,13 @@ class JobsController < ApplicationController
         salary_range: params[:job][:salary_range],
         company_id: params[:job][:company_id]
       )
-      if @job.save
-        redirect_to "/jobs/"
+      if @job.save!
+        redirect_to "/jobs"
       else
         render html: "Your job did not save correctly. Please try again."
       end
+    else
+      render html: "WHAT ARE YOU DOING HERE"
     end
   end
 end
