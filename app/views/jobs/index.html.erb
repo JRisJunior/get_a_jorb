@@ -1,3 +1,4 @@
+<div class="container">
 <h1 align="center">Jobs page</h1>
 <h2>What's new in the market</h2>
 <!-- search doesn't work yet  -->
@@ -16,7 +17,7 @@
 <% end %>
 <%@jobs.each do |jobs| %>
 <% if jobs.active = true%>
-<h3>#<%= jobs.id%>. <%= jobs.title%></h3>
+<h3><%= jobs.title%></h3>
 <p><%= jobs.description%></p>
 <li>Job site: <a href ="<%=jobs.url%>">Link</a></li>
 <li>Location: <%= jobs.location%></li>
@@ -32,3 +33,4 @@
 <p> No new jobs in region</p>
 <%end%>
 <%end%>
+</div>
