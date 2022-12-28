@@ -20,3 +20,5 @@ Job.create(company_id: 3,title: "Customer Success Manager", description: "", url
 
 User.create(name: "Junior", email: "Junior@email.com", password: "password")
 User.create(name: "Frank", email: "frank@email.com", password: "password")
+
+

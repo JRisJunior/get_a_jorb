@@ -35,6 +35,15 @@ class JobsController < ApplicationController
         company_id: params[:job][:company_id]
       )
       if @job.save
+        tags = params[:job][:tag_id]
+        parsed_tags = tags.split(',')
+        parsed_tags.each do |tag|
+          job_post_tags = JobPostTag.new(
+            job_id: @job.id,
+            tag_id: tag
+          )
+          job_post_tags.save
+        end
         redirect_to "/jobs"
       else
         render html: "Your job did not save correctly. Please try again."

@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   get "/login" => "sessions#new"
   post "/sessions" => "sessions#create"
   get "/logout" => "sessions#destroy"
+
+  get "/tags" => "tags#index"
+  get "/tags/new" => "tags#new", as: "new_tag"
+  post "/tags" => "tags#create"
 end
