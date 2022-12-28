@@ -30,7 +30,7 @@ class JobsController < ApplicationController
         salary_range: params[:job][:salary_range],
         company_id: params[:job][:company_id]
       )
-      if @job.save!
+      if @job.save
         redirect_to "/jobs"
       else
         render html: "Your job did not save correctly. Please try again."
