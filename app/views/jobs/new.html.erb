@@ -21,6 +21,10 @@
     <%= form.text_field :salary_range %>
   </div>
   <div>
-    <%= form.submit %>
+    <%= form.label "company ID" %>
+    <%= form.text_field :company_id %>
+  </div>
+  <div>
+    <%= form.submit "Create Job" %>
   </div>
 <% end %>

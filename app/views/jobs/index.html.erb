@@ -10,6 +10,10 @@
 
 <label> Active: </label><input type ="checkbox" id ="active">
 <hr />
+<% if current_user.admin_level == true %>
+<a href="/jobs/new" class="btn btn-primary">Add New Job</a>
+<% else %>
+<% end %>
 <%@jobs.each do |jobs| %>
 <% if jobs.active = true%>
 <h3>#<%= jobs.id%>. <%= jobs.title%></h3>
@@ -23,4 +27,4 @@
 <%else%>
 <p> No new jobs in region</p>
 <%end%>
-<% end%>
+<%end%>
