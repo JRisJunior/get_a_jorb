@@ -12,6 +12,10 @@
 <li>Location: <%= jobs.location%></li>
 <li> Active: <%= jobs.active%></li>
 <li>Salary: <%= jobs.salary_range%></li>
+<li>Tags: <% jobs.tags.each do |tag|%>
+    <%= tag.name%> |
+    <% end%>
+    </li>
 <a href="/jobs/<%= jobs.id %>">Jobs by the company</a>
 <hr />
 <%else%>
