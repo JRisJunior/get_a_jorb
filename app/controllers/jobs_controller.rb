@@ -3,7 +3,7 @@ class JobsController < ApplicationController
     if params[:search]
       @jobs = Job.where("title iLIKE ?", "%" + params[:search] + "%")
     else
-      @jobs = Job.all
+      @jobs = Job.all.sort
     end
     render "jobs/index"
   end
