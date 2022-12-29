@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # get "/jobs/:id" => "jobs#show"
 
   resources :jobs
+  resources :companies
 
   get "/signup" => "users#new"
   post "/users" => "users#create"
