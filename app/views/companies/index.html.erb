@@ -5,7 +5,8 @@
 
 <% @companies.each do |company| %>
 <h3><%= company.name%></h3>
-<p><%= company.logo%></p>
+<p><img src="<%= company.logo%>" style ="max-height:200px; max-width:200px"></p>
 <li>Description: <%= company.description%></li>
+<hr/>
 <% end %>
 </div>
