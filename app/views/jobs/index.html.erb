@@ -1,16 +1,17 @@
-<div class="container">
-<h1 align="center">Jobs page</h1>
-<h2>What's new in the market</h2>
-<!-- search doesn't work yet  -->
+
+<div class="container-fluid" style="background-image:url(/images/bg2.png)">
+<h1 align="center" style= "color: white;font-family:roboto">Find your dream job</h1>
+<!-- search -->
 <%= form_tag jobs_path, method: :get do%>
-<%=label_tag "Search job title:"%>
-<%=text_field_tag :search, params[:search]%>
-<%= submit_tag "Search" %>
+<div class="input-group mb-3 w-50">
+<%=text_field_tag :search, params[:search], placeholder:"Job Title, Keywords", class: "form-control"%>
+<%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-
-
-<label> Active: </label><input type ="checkbox" id ="active">
+</div>
 <hr />
+
+</div>
+<div class="container">
 <% if current_user && current_user.admin_level == true %>
 <a href="/jobs/new" class="btn btn-primary">Add New Job</a>
 <a href="/tags/new" class="btn btn-primary">Add New Tag</a>
