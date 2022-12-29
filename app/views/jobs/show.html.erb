@@ -6,6 +6,10 @@
 <p>Location: <%= @job.location %></p>
 <p>Salary Range: <%= @job.salary_range %></p>
 <p><a href=<%= @job.url %>> Direct Link to Job Site</a></p>
+<li>Tags: <% @job.tags.each do |tag|%>
+    <%= tag.name%> |
+    <% end%>
+    </li>
 <hr />
 <a href="/jobs">Back to all jobs</a>
 
