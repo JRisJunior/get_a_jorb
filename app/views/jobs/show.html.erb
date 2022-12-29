@@ -1,13 +1,12 @@
 <div class="container">
-
-<img src="<%= @job.company.logo%>" style="max-height: 200px; max-width: 200px;" >
-<h4>  About the company </h4>
-<p>  <%= @job.company.description%></p>
-<br />
-<h5>Jobs</h5>
-<br />
-
-
+<h1>Job</h1>
+<h3><%= @job.title %></h3>
+<hr />
+<p>Description: <%= @job.description %></p>
+<p>Location: <%= @job.location %></p>
+<p>Salary Range: <%= @job.salary_range %></p>
+<p><a href=<%= @job.url %>> Direct Link to Job Site</a></p>
+<hr />
 <a href="/jobs">Back to all jobs</a>
 
 </div>
