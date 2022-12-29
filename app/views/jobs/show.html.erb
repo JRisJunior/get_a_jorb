@@ -1,10 +1,11 @@
 <div class="container">
-<h1>Jobs by company</h1>
-<h3>Company - <%= @job.company.name%></h3>
+<h1>Job</h1>
+<h3><%= @job.title %></h3>
 <hr />
-<% @jobs_by_company.each do |jobs|%>
-  <li>Title: <%= jobs.title%></li>
-<% end %>
+<p>Description: <%= @job.description %></p>
+<p>Location: <%= @job.location %></p>
+<p>Salary Range: <%= @job.salary_range %></p>
+<p><a href=<%= @job.url %>> Direct Link to Job Site</a></p>
 <hr />
 <a href="/jobs">Back to all jobs</a>
 </div>
