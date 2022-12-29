@@ -32,8 +32,9 @@
       <a class="nav-item nav-link" href="http://localhost:3000/logout">Logout</a>
       <%end%>
       
+      <% if !current_user %>
       <a class="nav-item nav-link" href="http://localhost:3000/signup">Sign Up</a>
-      <a class="nav-item nav-link disabled" href="#"></a>
+      <% end %>
     </div>
   </div>
 </div>
