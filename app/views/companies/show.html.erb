@@ -1,8 +1,14 @@
 <div class="container">
-<h1>Company</h1>
-<hr />
-<h3><%= @company.name%></h3>
-<h3><%= @company.description%></h3>
+<img src="<%= @company.logo%>" style="max-height: 200px; max-width: 200px;" >
+<h4>  About the company </h4>
+<p>  <%= @company.description%></p>
 
+<br />
+<h5>Jobs</h5>
+<% @jobs_by_company.each do |jobs| %>
+ Title: <a href= <%="http://localhost:3000/jobs/#{jobs.id}"%>> <%= jobs.title%> </a>
+  <hr />
+<%end%>
+<br />
 
 </div>
