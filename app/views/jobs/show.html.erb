@@ -2,14 +2,11 @@
 
 <img src="<%= @job.company.logo%>" style="max-height: 200px; max-width: 200px;" >
 <h4>  About the company </h4>
-<p>  <%= @job.title%></p>
+<p>  <%= @job.company.description%></p>
 <br />
 <h5>Jobs</h5>
 <br />
-<% @jobs_by_company.each do |jobs|%>
-  Title: <a href =<%="http://localhost:3000/jobs?search=#{jobs.title}&commit=Search"%>><%= jobs.title%></a>
-<hr />
-<% end %>
+
 
 <a href="/jobs">Back to all jobs</a>
 
